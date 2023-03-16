@@ -32,11 +32,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.userNameTB = new System.Windows.Forms.TextBox();
-            this.passwordTB = new System.Windows.Forms.TextBox();
             this.LoginBTN = new System.Windows.Forms.Button();
+            this.passwordTB = new System.Windows.Forms.TextBox();
+            this.userNameTB = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -78,41 +78,6 @@
             this.panel1.Size = new System.Drawing.Size(350, 180);
             this.panel1.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 30);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Käyttäjä:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 30);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Salasana:";
-            // 
-            // userNameTB
-            // 
-            this.userNameTB.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameTB.Location = new System.Drawing.Point(122, 21);
-            this.userNameTB.Name = "userNameTB";
-            this.userNameTB.Size = new System.Drawing.Size(215, 32);
-            this.userNameTB.TabIndex = 2;
-            // 
-            // passwordTB
-            // 
-            this.passwordTB.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTB.Location = new System.Drawing.Point(122, 67);
-            this.passwordTB.Name = "passwordTB";
-            this.passwordTB.Size = new System.Drawing.Size(215, 32);
-            this.passwordTB.TabIndex = 3;
-            this.passwordTB.UseSystemPasswordChar = true;
-            // 
             // LoginBTN
             // 
             this.LoginBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(245)))));
@@ -125,6 +90,42 @@
             this.LoginBTN.TabIndex = 4;
             this.LoginBTN.Text = "Kirjaudu";
             this.LoginBTN.UseVisualStyleBackColor = false;
+            this.LoginBTN.Click += new System.EventHandler(this.LoginBTN_Click);
+            // 
+            // passwordTB
+            // 
+            this.passwordTB.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTB.Location = new System.Drawing.Point(122, 67);
+            this.passwordTB.Name = "passwordTB";
+            this.passwordTB.Size = new System.Drawing.Size(215, 32);
+            this.passwordTB.TabIndex = 3;
+            this.passwordTB.UseSystemPasswordChar = true;
+            // 
+            // userNameTB
+            // 
+            this.userNameTB.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameTB.Location = new System.Drawing.Point(122, 21);
+            this.userNameTB.Name = "userNameTB";
+            this.userNameTB.Size = new System.Drawing.Size(215, 32);
+            this.userNameTB.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(11, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 30);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Salasana:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 30);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Käyttäjä:";
             // 
             // Kirjautumisikkuna
             // 
