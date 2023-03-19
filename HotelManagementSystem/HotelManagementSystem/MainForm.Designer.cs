@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ManageClientsBTN = new System.Windows.Forms.Button();
+            this.ManageBookingBTN = new System.Windows.Forms.Button();
+            this.ManageRoomsBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -45,44 +45,47 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tervetuloa Hotellisovellukseen!\r\nValitse, mitä haluat tehdä.";
             // 
-            // button1
+            // ManageClientsBTN
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(29, 93);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(329, 42);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Hallitse asiakkaita";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ManageClientsBTN.BackColor = System.Drawing.Color.SteelBlue;
+            this.ManageClientsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ManageClientsBTN.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageClientsBTN.ForeColor = System.Drawing.Color.White;
+            this.ManageClientsBTN.Location = new System.Drawing.Point(29, 93);
+            this.ManageClientsBTN.Name = "ManageClientsBTN";
+            this.ManageClientsBTN.Size = new System.Drawing.Size(329, 42);
+            this.ManageClientsBTN.TabIndex = 1;
+            this.ManageClientsBTN.Text = "Hallitse asiakkaita";
+            this.ManageClientsBTN.UseVisualStyleBackColor = false;
+            this.ManageClientsBTN.Click += new System.EventHandler(this.ManageClientsBTN_Click);
             // 
-            // button2
+            // ManageBookingBTN
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(29, 148);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(329, 42);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Hallitse varauksia";
-            this.button2.UseVisualStyleBackColor = false;
+            this.ManageBookingBTN.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.ManageBookingBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ManageBookingBTN.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageBookingBTN.ForeColor = System.Drawing.Color.White;
+            this.ManageBookingBTN.Location = new System.Drawing.Point(29, 148);
+            this.ManageBookingBTN.Name = "ManageBookingBTN";
+            this.ManageBookingBTN.Size = new System.Drawing.Size(329, 42);
+            this.ManageBookingBTN.TabIndex = 2;
+            this.ManageBookingBTN.Text = "Hallitse varauksia";
+            this.ManageBookingBTN.UseVisualStyleBackColor = false;
+            this.ManageBookingBTN.Click += new System.EventHandler(this.ManageBookingBTN_Click);
             // 
-            // button3
+            // ManageRoomsBTN
             // 
-            this.button3.BackColor = System.Drawing.Color.IndianRed;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(30, 205);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(329, 42);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Hallitse huoneita";
-            this.button3.UseVisualStyleBackColor = false;
+            this.ManageRoomsBTN.BackColor = System.Drawing.Color.IndianRed;
+            this.ManageRoomsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ManageRoomsBTN.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageRoomsBTN.ForeColor = System.Drawing.Color.White;
+            this.ManageRoomsBTN.Location = new System.Drawing.Point(30, 205);
+            this.ManageRoomsBTN.Name = "ManageRoomsBTN";
+            this.ManageRoomsBTN.Size = new System.Drawing.Size(329, 42);
+            this.ManageRoomsBTN.TabIndex = 3;
+            this.ManageRoomsBTN.Text = "Hallitse huoneita";
+            this.ManageRoomsBTN.UseVisualStyleBackColor = false;
+            this.ManageRoomsBTN.Click += new System.EventHandler(this.ManageRoomsBTN_Click);
             // 
             // MainForm
             // 
@@ -91,9 +94,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(624, 461);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ManageRoomsBTN);
+            this.Controls.Add(this.ManageBookingBTN);
+            this.Controls.Add(this.ManageClientsBTN);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -108,8 +111,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ManageClientsBTN;
+        private System.Windows.Forms.Button ManageBookingBTN;
+        private System.Windows.Forms.Button ManageRoomsBTN;
     }
 }

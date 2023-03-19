@@ -16,5 +16,23 @@ namespace HotelManagementSystem
         {
             InitializeComponent();
         }
+
+        private void ManageClientsBTN_Click(object sender, EventArgs e)
+        {
+            ManageClientsForm manageCF = new ManageClientsForm();
+            manageCF.ShowDialog();
+        }
+
+        private void ManageBookingBTN_Click(object sender, EventArgs e)
+        {
+            ManageReservationsForm manageRSVF = new ManageReservationsForm();
+            manageRSVF.ShowDialog();
+        }
+
+        private void ManageRoomsBTN_Click(object sender, EventArgs e)
+        {
+            ManageRoomsForm manageRF = new ManageRoomsForm();
+            manageRF.ShowDialog();
+        }
     }
 }
