@@ -28,26 +28,34 @@ namespace HotelManagementSystem
 
         private void addRoomBTN_Click(object sender, EventArgs e)
         {
-            int number = Convert.ToInt32(roomNumberTB.Text);
             int type = Convert.ToInt32(roomTypeCB.SelectedValue.ToString());
             string phone = roomPhoneTB.Text;
-            string free = "Yes";
-            if (FreeRoomRadioBTN.Checked)
+            string free = "";
+            try
             {
-                free = "Yes";
+                int number = Convert.ToInt32(roomNumberTB.Text);
+
+                if (FreeRoomRadioBTN.Checked)
+                {
+                    free = "Yes";
+                }
+                else if (NotFreeRoomRadioBTN.Checked)
+                {
+                    free = "No";
+                }
+                if (room.addRoom(number,type,phone,free))
+                {
+                    roomDataGridView.DataSource = room.getRooms();
+                    MessageBox.Show("Room Added Successfully", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Room Not Added", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else if (NotFreeRoomRadioBTN.Checked)
+            catch (Exception ex)
             {
-                free = "No";
-            }
-            if (room.addRoom(number,type,phone,free))
-            {
-                roomDataGridView.DataSource = room.getRooms();
-                MessageBox.Show("Room Added Successfully", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Room Not Added", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Room Number Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

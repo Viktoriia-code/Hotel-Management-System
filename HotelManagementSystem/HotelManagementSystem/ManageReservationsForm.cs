@@ -153,6 +153,8 @@ namespace HotelManagementSystem
             roomTypeCB.SelectedValue = room.getRoomType(roomId);
             roomNumberCB.SelectedValue = roomId;
             clientNumTB.Text = reservationDataGridView.CurrentRow.Cells[2].Value.ToString();
+            dateInTP.Value = Convert.ToDateTime(reservationDataGridView.CurrentRow.Cells[3].Value);
+            dateOutTP.Value = Convert.ToDateTime(reservationDataGridView.CurrentRow.Cells[4].Value);
         }
 
         private void removeBookingBTN_Click(object sender, EventArgs e)

@@ -42,7 +42,7 @@ namespace HotelManagementSystem
         public int getRoomType(int number)
         {
             CONNECT conn = new CONNECT();
-            MySqlCommand command = new MySqlCommand("SELECT `type` FROM `rooms` WHERE `free`='Yes' and `number`=@num", conn.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT `type` FROM `rooms` WHERE `number`=@num", conn.getConnection());
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataTable table = new DataTable();
 
