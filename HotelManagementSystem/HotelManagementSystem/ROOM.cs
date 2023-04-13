@@ -35,7 +35,48 @@ namespace HotelManagementSystem
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
+
             return table;
+        }
+        // function to return the room type id
+        public int getRoomType(int number)
+        {
+            CONNECT conn = new CONNECT();
+            MySqlCommand command = new MySqlCommand("SELECT `type` FROM `rooms` WHERE `free`='Yes' and `number`=@num", conn.getConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+
+            //@num
+            command.Parameters.Add("@num", MySqlDbType.Int32).Value = number;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            return Convert.ToInt32(table.Rows[0][0].ToString());
+        }
+
+        public bool setRoomFree(int number, String YES_or_NO)
+        {
+            CONNECT conn = new CONNECT();
+            MySqlCommand command = new MySqlCommand("UPDATE `rooms` SET `free`=@yes_no WHERE `number`=@num", conn.getConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+
+            //@num,@yes_no
+            command.Parameters.Add("@num", MySqlDbType.Int32).Value = number;
+            command.Parameters.Add("@yes_no", MySqlDbType.VarChar).Value = YES_or_NO;
+
+            conn.openConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                conn.closeConnection();
+                return true;
+            }
+            else
+            {
+                conn.closeConnection();
+                return false;
+            }
         }
 
         public bool addRoom(int number, int type, String phone, String free)

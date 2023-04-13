@@ -31,8 +31,16 @@ namespace HotelManagementSystem
             int number = Convert.ToInt32(roomNumberTB.Text);
             int type = Convert.ToInt32(roomTypeCB.SelectedValue.ToString());
             string phone = roomPhoneTB.Text;
-
-            if(room.addRoom(number,type,phone,"Yes"))
+            string free = "Yes";
+            if (FreeRoomRadioBTN.Checked)
+            {
+                free = "Yes";
+            }
+            else if (NotFreeRoomRadioBTN.Checked)
+            {
+                free = "No";
+            }
+            if (room.addRoom(number,type,phone,free))
             {
                 roomDataGridView.DataSource = room.getRooms();
                 MessageBox.Show("Room Added Successfully", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -68,11 +76,11 @@ namespace HotelManagementSystem
                 int number = Convert.ToInt32(roomNumberTB.Text);
                 if(FreeRoomRadioBTN.Checked)
                 {
-                    free = "YES";
+                    free = "Yes";
                 }
                 else if(NotFreeRoomRadioBTN.Checked)
                 {
-                    free = "NO";
+                    free = "No";
                 }
                 if(room.editRoom(number,type,phone,free))
                 {

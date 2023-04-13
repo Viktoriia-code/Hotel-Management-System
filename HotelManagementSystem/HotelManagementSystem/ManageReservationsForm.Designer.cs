@@ -141,11 +141,14 @@
             // 
             // reservationDataGridView
             // 
+            this.reservationDataGridView.AllowUserToAddRows = false;
+            this.reservationDataGridView.AllowUserToDeleteRows = false;
             this.reservationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.reservationDataGridView.Location = new System.Drawing.Point(411, 101);
             this.reservationDataGridView.Name = "reservationDataGridView";
             this.reservationDataGridView.Size = new System.Drawing.Size(425, 360);
             this.reservationDataGridView.TabIndex = 10;
+            this.reservationDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.reservationDataGridView_CellClick);
             // 
             // clientNumTB
             // 
@@ -176,6 +179,7 @@
             this.removeBookingBTN.TabIndex = 22;
             this.removeBookingBTN.Text = "Poista";
             this.removeBookingBTN.UseVisualStyleBackColor = false;
+            this.removeBookingBTN.Click += new System.EventHandler(this.removeBookingBTN_Click);
             // 
             // editBookingBTN
             // 
@@ -187,6 +191,7 @@
             this.editBookingBTN.TabIndex = 21;
             this.editBookingBTN.Text = "Muokkaa";
             this.editBookingBTN.UseVisualStyleBackColor = false;
+            this.editBookingBTN.Click += new System.EventHandler(this.editBookingBTN_Click);
             // 
             // addBookingBTN
             // 
